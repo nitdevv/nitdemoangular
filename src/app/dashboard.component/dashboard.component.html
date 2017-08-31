@@ -1,0 +1,8 @@
+<h3>TODOS</h3>
+<ul class="heroes">
+    <li *ngFor="let todo of todos"
+     [class.hidden]="showT(todo)">
+        <span class="badge">{{todo.id}}</span> {{todo.name}}
+        <button (click)="gotoDetail(todo)">edit</button>
+    </li>
+</ul>

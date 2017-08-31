@@ -1,0 +1,6 @@
+
+<div >
+  <input type="name"  class="form-control" required
+  [(ngModel)]="todo.name" >
+  <button *ngIf="edit===true" (click)="editdata(todo)">update</button>
+</div>
