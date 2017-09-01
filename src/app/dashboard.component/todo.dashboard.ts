@@ -1,7 +1,8 @@
 import { Component, OnInit, OnChanges, Input } from '@angular/core'
 import { Todo } from '../todo.data/todo';
-import { HeroService } from '.todo.services';
+import { HeroService } from '../services/todo.service';
 import { Router } from '@angular/router-deprecated';
+import { HTTP_PROVIDERS } from '@angular/http';
 @Component({
     selector: 'my-dashboard',
     templateUrl: 'app/dashboard.component/dashboard.component.html',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router-deprecated';
 })
 export class DashboardComponent implements OnInit, OnChanges {
     todos: Todo[] = [];
-    fType: string;
+    nameType: string;
     show_todo: boolean;
     constructor(
         private _router: Router,

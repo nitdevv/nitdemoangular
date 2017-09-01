@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core'
-import { Todo } from './todo';
-import { TODOS } from './data-todo';
+import { Todo } from '../todo.data/todo';
+import { TODOS } from '../todo.data/todo.data';
+import { Injectable } from '@angular/core';
 import * as _  from 'lodash';
 @Injectable()
 export class HeroService implements OnInit {

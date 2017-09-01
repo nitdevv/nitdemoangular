@@ -1,37 +1,39 @@
 import { Component, OnInit } from '@angular/core'
-import {DashboardComponent} from '../dashboard.component/todo.dashboard'
-import {HeroService} from '../services/todo.service'
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
-import {EditComponent} from '../edit.component/edit.component';
-import * as _  from 'lodash';
-
-@RouteConfig([
-    {
-        path: '/dashboard',
-        name: 'Dashboard',
-        component: DashboardComponent,
-        useAsDefault: true
-    },
-    {
-        path: '/edit',
-        name: 'Edit',
-        component: EditComponent,
-    }
-])
+import { Todo } from '../todo.data/todo';
+import { HeroService } from '../services/todo.service';
+import { Router } from '@angular/router-deprecated';
+import { RouteParams } from '@angular/router-deprecated';
+import * as _ from 'lodash';
 @Component({
-    selector: 'root-app',
-    template:
-    `<router-outlet></router-outlet>
-    `,
-    directives: [ROUTER_DIRECTIVES],
-    providers: [
-        ROUTER_PROVIDERS,
-        HeroService
-    ]
+    selector: 'edit-component',
+    templateUrl: 'app/edit.component/edit.component.html',
+    styleUrls: ['app/css/dashboard.component.css']
 })
-export class AppComponent implements OnInit {
-    title = 'ToDo';
-    ngOnInit() {
+export class EditComponent implements OnInit {
+    todo: Todo[] = [];
+    edit:Boolean;
+    constructor(
+        private _router: Router,
+        private _HeroService: HeroService,
+        private _routeParams: RouteParams
 
+    ) { }
+    editdata(selected: Todo) {
+        this._HeroService.editData(selected);
+        this._router.navigate(['Dashboard']);
     }
+    ngOnInit() {
+        let id = +this._routeParams.get('id');
+        if (id) {
+            this.edit = true;
+            this._HeroService.getdetail(id)
+                .then(todo => {
+                    this.todo = todo;
+                });
+        }
+        else {
+            this.edit = false;
+        }
+    }
+
 }

@@ -11,4 +11,3 @@ export var TODOS: Todo[] = [
   { id: 19, name: 'Magma' },
   { id: 20, name: 'Tornado' }
 ];
-
