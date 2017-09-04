@@ -1,19 +1,21 @@
 import { Component, OnInit, OnChanges, Input } from '@angular/core'
 import { Todo } from '../todo.data/todo';
 import { HeroService } from '../services/todo.service';
-import { Router } from '@angular/router-deprecated';
-import { HTTP_PROVIDERS } from '@angular/http';
+import {ActivatedRoute} from '@angular/router';
+
 @Component({
     selector: 'my-dashboard',
-    templateUrl: 'app/dashboard.component/dashboard.component.html',
-    styleUrls: ['app/css/dashboard.component.css'],
+    templateUrl: './dashboard.component.html',
+
+    styleUrls: ['../dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit, OnChanges {
     todos: Todo[] = [];
-    nameType: string;
+
+    nametype: string;
     show_todo: boolean;
     constructor(
-        private _router: Router,
+        private router:ActivatedRoute,
         private _HeroService: HeroService
     ) { }
     ngOnChanges(changes) {
@@ -24,10 +26,14 @@ export class DashboardComponent implements OnInit, OnChanges {
                 this.todos = todos
 
             });
+             console.log(this.todos);
     }
-    gotoDetail(todo: Todo) {
-        let link = ['Edit', { id: todo.id }];
-        this._router.navigate(link);
+    // gotoDetail(todo: Todo) {
+    //     let link = ['Edit', { id: todo.id }];
+    //     this.router.navigate(['/edit']);
+    // }
+    gotoDetail(todo:Todo){
+
     }
     showT(todo:Todo){
     }
