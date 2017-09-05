@@ -19,7 +19,7 @@ import{RouterModule} from '@angular/router';
       {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
       {path:'',component:DashboardComponent},
       {path:'edit',component:EditComponent},
-      {path:'dashboard/:id',component:EditComponent}
+      {path:'Edit/:id',component:EditComponent}
 
     ]),
      FormsModule,
@@ -28,4 +28,3 @@ import{RouterModule} from '@angular/router';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
