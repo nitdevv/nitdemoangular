@@ -33,7 +33,6 @@ export class EditComponent implements OnInit {
      }
     ngOnInit() {
         let id = this.route.snapshot.params['id'];
-        console.log(this.route.snapshot.params);
         if (id) {
             this.edit = true;
             // this.HeroService.getHeroes()
@@ -51,4 +50,3 @@ export class EditComponent implements OnInit {
       this.location.back();
     }
 }
-

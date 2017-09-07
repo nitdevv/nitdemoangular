@@ -33,12 +33,9 @@ export class DashboardComponent implements OnInit, OnChanges {
  }
     addTodo() {
         let link = ['Edit'];
-        console.log('hii');
         this.router.navigate(['/edit']);
-        console.log('yoo');
 
     }
     showT(todo:Todo){
     }
 }
-
