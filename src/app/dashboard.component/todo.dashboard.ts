@@ -12,7 +12,7 @@ import { HttpModule }    from '@angular/http';
 })
 export class DashboardComponent implements OnInit, OnChanges {
     todos: Todo[] = [];
-    nametype: string;
+    nameType: string;
     show_todo: boolean;
     constructor(
         private HeroService: HeroService,
