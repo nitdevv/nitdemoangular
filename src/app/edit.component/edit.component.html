@@ -1,6 +1,8 @@
-
-<div >
-  <input type="name"  class="form-control" required
+<button (click)="goBack()">Back</button>
+<div>
+  <input type="name"  class="form-control"required
   [(ngModel)]="todo.name" >
-  <button *ngIf="edit===true" (click)="editdata(todo)">update</button>
+   <button *ngIf="edit===true" (click)="editdata(todo)">update</button>
+   <button *ngIf="edit==false" (click)="addData(todo)">Add</button>
 </div>
+
