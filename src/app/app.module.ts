@@ -18,8 +18,7 @@ import{RouterModule} from '@angular/router';
     RouterModule.forRoot([
       {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
       {path:'',component:DashboardComponent},
-      {path:'Edit/:id',component:EditComponent}
-
+      {path:'edit/:id',component:EditComponent},
     ]),
      FormsModule,
   ],
