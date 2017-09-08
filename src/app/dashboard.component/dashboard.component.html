@@ -1,8 +1,9 @@
 <h3>TODOS</h3>
 <ul class="heroes">
-    <li *ngFor="let todo of todos">
-        <span class="badge">{{todo.id}}</span> {{todo.name}}
-        <button (click)="gotoDetail(todo)" >edit</button>
-    </li>
+  <li *ngFor="let todo of todos"
+     [class.strike]="todo.complete">
+     <input type="checkbox" [(ngModel)]="todo.complete" > <span class="badge">{{todo.id}}</span> {{todo.name}}
+     <button (click)="gotoDetail(todo)">edit</button>
+  </li>
     <button (click)="addTodo()">Add New</button>
 </ul>
