@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from '../app/app.component/app.component';
 import { DashboardComponent } from '../app/dashboard.component/todo.dashboard';
 import { EditComponent } from '../app/edit.component/edit.component';
-import { TodDetailComponent } from '../app/stats.component';
+import { StatsComponent } from '../app/stats.component';
 
 import{RouterModule} from '@angular/router';
 
@@ -13,7 +13,7 @@ import{RouterModule} from '@angular/router';
     AppComponent,
     DashboardComponent,
     EditComponent,
-    TodDetailComponent
+    StatsComponent
   ],
   imports: [
     BrowserModule,

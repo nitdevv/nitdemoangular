@@ -8,10 +8,10 @@ import * as _  from 'lodash';
     template: `
     <nav class="navbar navbar-default">
   <div class="container-fluid">
-  {{done(todos)}}
+
     <div class="navbar-header">
         <button role="group" class="btn btn-default" type="button">
- 	  All <span class="badge">{{NoTodos}}</span>
+ 	  All <span class="badge"> {{done(todos)}}{{NoTodos}}</span>
  	</button>
         <button role="group" class="btn btn-default" type="button">
  	  Todo <span class="badge">{{to_do.length}}</span>
@@ -24,7 +24,7 @@ import * as _  from 'lodash';
 </nav>
   `
 })
-export class TodDetailComponent implements OnInit, OnChanges {
+export class StatsComponent implements OnInit, OnChanges {
     @Input() todos: Todo[];
     to_do: Todo[];
     done_todo: Todo[];

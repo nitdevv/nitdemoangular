@@ -5,7 +5,7 @@ import { HeroService } from '../services/todo.service';
 import {Router} from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpModule }    from '@angular/http';
-import { TodDetailComponent } from '../stats.component';
+import { StatsComponent } from '../stats.component';
 
 @Component({
     selector: 'my-dashboard',

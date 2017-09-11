@@ -22,6 +22,7 @@ export class EditComponent implements OnInit {
 
     ) { }
     editdata(selected: Todo) {
+      console.log(selected);
         this.HeroService.editData(selected);
         this.location.back();
       }
