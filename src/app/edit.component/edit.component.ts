@@ -22,12 +22,13 @@ export class EditComponent implements OnInit {
 
     ) { }
     editdata(selected: Todo) {
-      console.log(selected);
         this.HeroService.editData(selected);
         this.location.back();
       }
       addData(newdata: Todo) {
          newdata.id = _.random(0, 500);
+         newdata.active=true;
+         newdata.complete=false;
          this.HeroService.addTodo(newdata);
          this.location.back();
      }

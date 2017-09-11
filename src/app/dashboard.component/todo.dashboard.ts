@@ -5,6 +5,8 @@ import { HeroService } from '../services/todo.service';
 import {Router} from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpModule }    from '@angular/http';
+import { TodDetailComponent } from '../stats.component';
+
 @Component({
     selector: 'my-dashboard',
     templateUrl: './dashboard.component.html',
@@ -35,6 +37,16 @@ export class DashboardComponent implements OnInit, OnChanges {
         let link = ['Edit'];
         this.router.navigate(['/edit']);
 
+    }
+    complete(event:any,todo:Todo){
+      if(event===true){
+        todo.active=false;
+        todo.complete=true;
+      }
+      else{
+        todo.active=true;
+        todo.complete=false;
+      }
     }
     showT(todo:Todo){
     }
