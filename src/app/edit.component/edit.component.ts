@@ -28,6 +28,8 @@ export class EditComponent implements OnInit {
       }
       addData(newdata: Todo) {
          newdata.id = _.random(0, 500);
+         newdata.active=true;
+         newdata.complete=false;
          this.HeroService.addTodo(newdata);
          this.location.back();
      }

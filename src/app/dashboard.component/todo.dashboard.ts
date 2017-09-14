@@ -5,6 +5,10 @@ import { HeroService } from '../services/todo.service';
 import {Router} from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpModule }    from '@angular/http';
+import { StatsComponent } from '../stats.component';
+import * as _  from 'lodash';
+
+
 @Component({
     selector: 'my-dashboard',
     templateUrl: './dashboard.component.html',
@@ -35,6 +39,14 @@ export class DashboardComponent implements OnInit, OnChanges {
         let link = ['Edit'];
         this.router.navigate(['/edit']);
 
+    }
+    complete($event:any,todo:Todo){
+      this.todos = _.map(this.todos,(todo) => {
+        if(todo.id === todo.id){
+            todo.complete = !todo.complete;
+          }
+        return todo;
+      });
     }
     showT(todo:Todo){
     }
