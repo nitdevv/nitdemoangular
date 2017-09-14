@@ -11,7 +11,7 @@ import * as _  from 'lodash';
 
     <div class="navbar-header">
         <button role="group" class="btn btn-default" type="button" (click)="filterTodo('all')">
- 	  All <span class="badge"> {{done(todos)}}{{NoTodos}}</span>
+ 	  All <span class="badge">{{NoTodos}}</span>
  	</button>
         <button role="group" class="btn btn-default" type="button" (click)="filterTodo('todoT')">
  	  Todo <span class="badge">{{to_do.length}}</span>
