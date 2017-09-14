@@ -6,6 +6,8 @@ import {Router} from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpModule }    from '@angular/http';
 import { StatsComponent } from '../stats.component';
+import * as _  from 'lodash';
+
 
 @Component({
     selector: 'my-dashboard',
@@ -38,15 +40,13 @@ export class DashboardComponent implements OnInit, OnChanges {
         this.router.navigate(['/edit']);
 
     }
-    complete(event:any,todo:Todo){
-      if(event===true){
-        todo.active=false;
-        todo.complete=true;
-      }
-      else{
-        todo.active=true;
-        todo.complete=false;
-      }
+    complete($event:any,todo:Todo){
+      this.todos = _.map(this.todos,(todo) => {
+        if(todo.id === todo.id){
+            todo.complete = !todo.complete;
+          }
+        return todo;
+      });
     }
     showT(todo:Todo){
     }
