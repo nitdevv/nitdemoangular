@@ -49,5 +49,17 @@ export class DashboardComponent implements OnInit, OnChanges {
       });
     }
     showT(todo:Todo){
+      if(this.nameType =='all'){
+          return false;
+       }else if(this.nameType == 'todoT'){
+          if(todo.complete){
+              return true;
+           }
+       }else if(this.nameType == 'doneT'){
+           if(!todo.complete){
+               return true;
+           }
+       }
+       return false;
     }
 }
