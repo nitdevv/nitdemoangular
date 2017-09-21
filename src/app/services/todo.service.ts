@@ -5,10 +5,12 @@ import { Injectable } from '@angular/core';
 import * as _  from 'lodash';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
+import { jsonData } from '../data/datajson';
+
 
 @Injectable()
 export class HeroService {
-    private _url: string = "http://localhost/angulardemo/src/data/tododata.json"
+    _url: string = jsonData.url;
     todo:Todo;
     todos: Todo[] = [];
     Data:any;

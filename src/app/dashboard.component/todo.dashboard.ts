@@ -5,7 +5,7 @@ import { HeroService } from '../services/todo.service';
 import {Router} from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpModule }    from '@angular/http';
-import { StatsComponent } from '../stats.component';
+import { StatsComponent } from '../stats/stats.component';
 import { AddComponent } from '../edit.component/add.component';
 
 import * as _  from 'lodash';

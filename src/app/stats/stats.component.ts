@@ -5,24 +5,7 @@ import * as _  from 'lodash';
 
 @Component({
     selector: 'my-header',
-    template: `
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-
-    <div class="navbar-header">
-        <button role="group" class="btn btn-default" type="button" (click)="filterTodo('all')">
- 	  All <span class="badge">{{NoTodos}}</span>
- 	</button>
-        <button role="group" class="btn btn-default" type="button" (click)="filterTodo('todoT')">
- 	  Todo <span class="badge">{{to_do.length}}</span>
- 	</button>
- 	<button role="group" class="btn btn-default" type="button"(click)="filterTodo('doneT')">
-	  Done <span class="badge">{{done_todo.length}}</span>
-	</button>
-</div>
-  </div>
-</nav>
-  `
+    templateUrl: ./stats.component.html'
 })
 export class StatsComponent implements OnInit, OnChanges {
     @Input() todos: Todo[];

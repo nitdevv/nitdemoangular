@@ -11,14 +11,7 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'edit-component',
-  template: `<div *ngIf="todo">
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="todo.name" placeholder="name"/>
-      </div>
-      <div><button (click)="goBack()">Save</button>
-      </div>
-    </div>`,
+  templateUrl: './edit.component.html',
   styleUrls: ['../dashboard.component.css'],
 })
 export class EditComponent implements OnInit {
