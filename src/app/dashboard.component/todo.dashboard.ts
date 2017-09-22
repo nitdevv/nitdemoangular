@@ -5,7 +5,9 @@ import { HeroService } from '../services/todo.service';
 import {Router} from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpModule }    from '@angular/http';
-import { StatsComponent } from '../stats.component';
+import { StatsComponent } from '../stats/stats.component';
+import { AddComponent } from '../edit.component/add.component';
+
 import * as _  from 'lodash';
 
 
@@ -49,5 +51,17 @@ export class DashboardComponent implements OnInit, OnChanges {
       });
     }
     showT(todo:Todo){
+      if(this.nameType =='all'){
+          return false;
+       }else if(this.nameType == 'todoT'){
+          if(todo.complete){
+              return true;
+           }
+       }else if(this.nameType == 'doneT'){
+           if(!todo.complete){
+               return true;
+           }
+       }
+       return false;
     }
 }
