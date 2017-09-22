@@ -7,6 +7,7 @@ import { EditComponent } from '../app/edit.component/edit.component';
 import { StatsComponent } from '../app/stats/stats.component';
 import { AddComponent } from '../app/edit.component/add.component';
 import{HttpModule} from '@angular/http';
+import {OrderByPipe} from '../app/dashboard.component/todo.pipe';
 
 import{RouterModule} from '@angular/router';
 
@@ -15,8 +16,9 @@ import{RouterModule} from '@angular/router';
     AppComponent,
     DashboardComponent,
     EditComponent,
-    StatsComponent
-    AddComponent
+    StatsComponent'
+    AddComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
