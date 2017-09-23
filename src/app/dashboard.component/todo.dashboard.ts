@@ -21,9 +21,6 @@ export class DashboardComponent implements OnInit, OnChanges {
     todos: Todo[] = [];
     nameType: string;
     show_todo: boolean;
-    isDesc: boolean = false;
-    direction: number;
-    column: string = 'name';
     constructor(
         private HeroService: HeroService,
         private router:Router
