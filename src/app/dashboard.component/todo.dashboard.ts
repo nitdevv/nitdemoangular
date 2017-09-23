@@ -7,7 +7,6 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpModule }    from '@angular/http';
 import { StatsComponent } from '../stats/stats.component';
 import { AddComponent } from '../edit.component/add.component';
-import {OrderByPipe} from '../dashboard.component/todo.pipe';
 
 
 import * as _  from 'lodash';
@@ -69,21 +68,5 @@ export class DashboardComponent implements OnInit, OnChanges {
        }
        return false;
     }
-      sort(property){
-      this.isDesc = !this.isDesc; //change the direction
-      this.column = property;
-      let direction = this.isDesc ? 1 : -1;
-      this.todos.sort(function(a, b){
-        console.log("mann")
-          if(a[property] < b[property]){
-              return -1 * direction;
-          }
-          else if( a[property] > b[property]){
-              return 1 * direction;
-          }
-          else{
-              return 0;
-          }
-      });
-  };
+      
 }
