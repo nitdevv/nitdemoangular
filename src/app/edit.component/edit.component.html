@@ -1,14 +1,8 @@
-<form #formCtrl="ngForm">
 <div *ngIf="todo">
     <div>
       <label>name: </label>
-      <input [(ngModel)]="todo.name" placeholder="name" class="form-control" required pattern="[a-zA-Z][a-zA-Z ]+" name="name" #name="ngModel"/>
-      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-        <div [hidden]="!name.hasError('required')">Name is required</div>
-        <div [hidden]="!name.hasError('pattern')">Only alphabetsallowed</div>
-      </div>
+      <input [(ngModel)]="todo.name" placeholder="name"/>
     </div>
     <div><button (click)="goBack()">Save</button></div>
     
 </div>
-</form>
