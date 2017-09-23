@@ -15,8 +15,9 @@ import{RouterModule} from '@angular/router';
     AppComponent,
     DashboardComponent,
     EditComponent,
-    StatsComponent
-    AddComponent
+    StatsComponent'
+    AddComponent,
+    
   ],
   imports: [
     BrowserModule,

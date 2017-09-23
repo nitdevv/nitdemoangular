@@ -8,6 +8,7 @@ import { HttpModule }    from '@angular/http';
 import { StatsComponent } from '../stats/stats.component';
 import { AddComponent } from '../edit.component/add.component';
 
+
 import * as _  from 'lodash';
 
 
@@ -64,4 +65,5 @@ export class DashboardComponent implements OnInit, OnChanges {
        }
        return false;
     }
+      
 }
