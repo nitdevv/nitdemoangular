@@ -7,8 +7,9 @@ import { EditComponent } from '../app/edit.component/edit.component';
 import { StatsComponent } from '../app/stats/stats.component';
 import { AddComponent } from '../app/edit.component/add.component';
 import{HttpModule} from '@angular/http';
-
 import{RouterModule} from '@angular/router';
+import {sortTodo} from '../app/dashboard.component/todo.pipe';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import{RouterModule} from '@angular/router';
     EditComponent,
     StatsComponent'
     AddComponent,
+    sortTodo,
     
   ],
   imports: [
