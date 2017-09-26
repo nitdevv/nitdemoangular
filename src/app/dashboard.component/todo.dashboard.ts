@@ -7,6 +7,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpModule }    from '@angular/http';
 import { StatsComponent } from '../stats/stats.component';
 import { AddComponent } from '../edit.component/add.component';
+import {sortTodo} from '../dashboard.component/todo.pipe';
+
 
 
 import * as _  from 'lodash';
